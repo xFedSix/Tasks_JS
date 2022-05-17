@@ -10,17 +10,13 @@
 //     break;
 //     case 2 : days = 28;
 //     break;
-    
 //     }
 //     return days;
 //   }
 //   let result = howManyDays(5);
 //   console.log(result);
-    
-  
-  
-  
-  
+
+
 // Task_2
 
 // function checkNumber(a, b){
@@ -29,7 +25,6 @@
 //     let result = ((a*b) % 2 == 0) ? c: d;
 //     console.log(result);
 // }
-
 // checkNumber();
 
 // Task_3
@@ -45,7 +40,7 @@
 
 // console.log(student);
 
-// Task_4!!!!!!!!!!!!!!!
+// Task_4
 
 // let book = {
 //     numberOfPages : 545,
