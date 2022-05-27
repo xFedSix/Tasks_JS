@@ -33,17 +33,25 @@
 // Task_4!!!!!!!
 
 // let arr = [6, 3, "ten", 1, true, "4"];
-
-// let sumArr = [];
+// let sum = 0;
 // arr.forEach((item) => {
-//     sumArr.push((item) => item + item);
-
-// })
-// console.log(sumArr);
-// let squareSumArr = arr.map {
-//     return item ** 2;
-// })
-
+    
+//     if (typeof(item) === "number"){
+//     return sum += item; 
+// }
+// else if (typeof(item) !== "number")
+//     return sum += 0;
+// sum = sum += item;
+//     // console.log(item *2);
+// });
+// console.log(sum);
+// // debugger;
+// let multiplicationArr = 1;
+// arr.forEach((item) => {
+//     if (typeof(item) === "number"){
+//     return multiplicationArr = multiplicationArr * item; 
+// }
+// });
 // console.log(multiplicationArr);
 
 // Task_5
