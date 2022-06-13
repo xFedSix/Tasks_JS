@@ -42,10 +42,10 @@
 // else if (typeof(item) !== "number")
 //     return sum += 0;
 // sum = sum += item;
-//     // console.log(item *2);
+
 // });
 // console.log(sum);
-// // debugger;
+
 // let multiplicationArr = 1;
 // arr.forEach((item) => {
 //     if (typeof(item) === "number"){
