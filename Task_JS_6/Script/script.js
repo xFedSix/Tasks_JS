@@ -1,153 +1,102 @@
 // Task_1
 
-// let student = {
-//     name: "Fiodar",
-//     age: "43",
-//     id: 1,
+// function calcSum(a, b, ...other) {
+//     console.log(other);
+//     return a + b;
 // }
-// const arrStudent = Object.entries(student)
-// console.log(arrStudent);
-// const arrStudentMap = new Map (arrStudent);
-// console.log(arrStudentMap);
+// console.log(calcSum(1, 2, 5, 8, 5, 4));
 
-// arrStudentMap
-//     .set("isDriver", true)
-//     .set("isMaried", true)
+// Task_2
 
-// console.log(arrStudentMap.has("name"));
+// let drivers = ["Dominic", "Brian", "Letty", "Roman"];
+// let antagonists = ["Deckard", "Luke"];
+// let family = [];
+// let family = [...drivers, ...antagonists];
 
-// // Task_2
+// let family = [drivers.slice(), antagonists.slice()];
 
+// family.concat = [drivers, antagonists];
 
-// for (let keys of arrStudentMap.keys()) {
-//       console.log(keys);
-// }
+// family.push.apply(family, [...drivers, ...antagonists]);
+
+// family.splice(0, 0, ...drivers, ...antagonists);
+
+// drivers.forEach((item) => {
+//     family.push(item);
+// });
+// antagonists.forEach((item) => {
+//     family.push(item);
+// });
     
-// for (let value of arrStudentMap.values()) {
-//         console.log(value);
-// }
-// for (let entry of arrStudentMap.entries()) {
-//       console.log(entry);
-//     }    
+// console.log(family);
 
 // Task_3
 
-// let amount= {
-//     apple: 440,
-//     burger: 316,
-//     juice: 1120,
-// }
-// const arrAmount = 
-// Object.fromEntries(
-//     Object.entries(amount).map(([key,value]) => {
-//     return [key, value / 2];
-//     })
-// )
-// console.log(arrAmount);
+// let cars = ["Jeep", "Jeep", "Kia", "BMW", "BMW", "BMW", "Renault"];
+// let unique = [...new Set(cars)];
+// console.log(unique);
 
 // Task_4
 
-
-// function sumAmount(obj) {
-//     return Object.values(obj).reduce((acc, val) => acc + val, 0)
-        
+// let arr = myCountry("Belarus");
+// let arr2 = [];
+// function myCountry(country) {
+//     return function myCity(city) {
+//         return arr2.push(country, city)
 //     }
-// console.log(sumAmount(arrAmount));
+// };
+// arr("minsk");
+// console.log (arr2);
 
-// Task_5
-// let strings = ["кришна", "кришна", "харе", "харе",
-//   "харе", "харе", "кришна", "кришна", ":-O", "маре"
-// ];
-// const set = new Set ();
-// function newArr (...arr) {
-//     strings.forEach(item => {
-//         if (!arr.includes(item)) {
-//           set.add(item);
-//     }
+// Task_5!!!!!!!
 
-// let arr = [... new Set(stringArr)];
-   
-// })}
-// console.log(set);
-// console.log(newArr(strings));
+
+// function printNumbers(from, to) {
+//     let timer = from;
+//     setTimeout(function number() {
+//     if (timer <= to) {
+//     setTimeout(number, 1000);
+//     console.log(timer);
+// }timer++
+// })};
+
+// function printNumbers(from, to) {
+//     let timer = from;
+//     let timerID = setInterval(function() {
+//     if (timer <= to) {
+//     setInterval(timerID);
+//     console.log(timer);
+// }timer++
+// },1000)};
+// printNumbers(1,10);
 
 // Task_6
 
-// const weather = 
-
-// {
-// "coord": {
-// "lon": -122.08,
-// "lat": 37.39
-// },
-// "weather": [
-// {
-// "id": 800,
-// "main": "Clear",
-// "description": "clear sky",
-// "icon": "01d"
-// }
-// ],
-// "base": "stations",
-// "main": {
-// "temp": 282.55,
-// "feels_like": 281.86,
-// "temp_min": 280.37,
-// "temp_max": 284.26,
-// "pressure": 1023,
-// "humidity": 100
-// },
-// "visibility": 10000,
-// "wind": {
-// "speed": 1.5,
-// "deg": 350
-// },
-// "clouds": {
-// "all": 1
-// },
-// "dt": 1560350645,
-// "sys": {
-// "type": 1,
-// "id": 5122,
-// "message": 0.0139,
-// "country": "US",
-// "sunrise": 1560343627,
-// "sunset": 1560396563
-// },
-// "timezone": -25200,
-// "id": 420006353,
-// "name": "Mountain View",
-// "cod": 200
-// }
-// let jsonObj = JSON.stringify(weather);
-
-// let cloneWeather = JSON.parse(jsonObj);
+// let timer = setInterval(() => console.log("message"), 3000);
+// setTimeout(() => { clearInterval(timer);}, 10000);
 
 // Task_7
 
-const time = 1654420481877;
+// 1, 6, 4, 5, 3.
 
-const date = new Date (time);
-
-
-function formatDate(date) {
-    let d = new Date(date),
-        month = "" + (d.getMonth() + 1),
-        day = "" + d.getDate(),
-        year = d.getFullYear(),
-        minutes = "" + d.getMinutes(),
-        seconds = "" + d.getSeconds();
-
-    if (month.length < 2) 
-        month = "0" + month;
-    if (day.length < 2) 
-        day = "0" + day;
-
-        return `${year}/${month}/${day} (${minutes}:${seconds})`
-}
- 
-console.log(formatDate(time));
+// Сам правильно не ответил, но потом разобрался
 
 
+// Task_8
+
+// let jordan = {
+//     name: "Michael",
+//     age: 59,
+//     info: function() {
+//         console.log(`${this.name}`);
+//     }
+//     }
+    
+// let messi = {
+//     name: "Lionel",
+//     age: 34,
+//     }
 
 
+// jordan.info();
+// jordan.info.call(messi);
