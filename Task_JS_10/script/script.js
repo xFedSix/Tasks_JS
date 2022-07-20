@@ -3,8 +3,9 @@ window.addEventListener("scroll", function (e) {
   const scrollFromTop = document.querySelector("html").scrollTop;
   header.style.background =
     scrollFromTop > 0
-      ? "linear-gradient(90.26deg, #7d604b 0.23%, #251000 99.8%)"
+      ? "red"
       : "";
+      header.style.transition  ="all 2s";
 });
 const button1 = document.getElementById("button1");
 const button2 = document.getElementById("button2");
@@ -52,17 +53,15 @@ submit.addEventListener("click", (e) => {
 function insertAdjacentHTML() {
   document.body.insertAdjacentHTML(
     "beforeend",
-    `<form name="some" class="form2" action="data"></form>`
+    `<form id="form2" name="some" class="form2" action="document.innerHtml = "getDate()""></form>`
   );
 }
 async function getData() {
   try {
     const response = await fetch(url);
     console.log(response);
-    if (!response.ok) {
-      throw new Error();
-    }
     const data = await response.json();
     return data;
   } catch (error) {}
 }
+
