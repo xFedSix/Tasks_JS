@@ -11,12 +11,13 @@
   margin-left: 70px;
 }
 
-.header {
+header {
   position: fixed;
   width: 1200px;
   height: 60px;
   left: calc(50% - 1200px / 2);
   top: 60px;
+  z-index: 100;
 }
 .logo {
   position: absolute;
@@ -485,4 +486,24 @@ footer {
   height: 310px;
   left: calc(50% - 300px / 2 + 450px);
   top: 0px;
+}
+form {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+  background-color: aquamarine;
+  left: 35%;
+  top: 80%;
+  border-radius: 100px;
+}
+.form2 {
+  position: fixed;
+  /* width: auto;
+  height: auto; */
+  left: 35%;
+  top: 50%;
+  /* visibility: hidden; */
 }
