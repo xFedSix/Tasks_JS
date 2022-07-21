@@ -1,11 +1,8 @@
 const header = document.querySelector("header");
 window.addEventListener("scroll", function (e) {
   const scrollFromTop = document.querySelector("html").scrollTop;
-  header.style.background =
-    scrollFromTop > 0
-      ? "red"
-      : "";
-      header.style.transition  ="all 2s";
+  header.style.background = scrollFromTop > 0 ? "red" : "";
+  header.style.transition = "all 2s";
 });
 const button1 = document.getElementById("button1");
 const button2 = document.getElementById("button2");
@@ -45,23 +42,23 @@ function checkboxCheck(e) {
     submit.disabled = true;
   }
 }
-const url = "https://jsonplaceholder.typicode.com/";
+const url = "https://jsonplaceholder.typicode.com/todos/1";
 
 submit.addEventListener("click", (e) => {
   insertAdjacentHTML();
 });
 function insertAdjacentHTML() {
-  document.body.insertAdjacentHTML(
-    "beforeend",
-    `<form id="form2" name="some" class="form2" action="document.innerHtml = "getDate()""></form>`
-  );
+  document.body.insertAdjacentHTML("beforeend", `<form id="form2"></form>`);
+  getData();
+  async function getData() {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const dataStr = JSON.stringify(data);
+      form.innerHTML = dataStr;
+      const insert = document.getElementById("form2");
+      insert.insertAdjacentText("afterBegin", dataStr);
+      return data;
+    } catch (error) {}
+  }
 }
-async function getData() {
-  try {
-    const response = await fetch(url);
-    console.log(response);
-    const data = await response.json();
-    return data;
-  } catch (error) {}
-}
-
