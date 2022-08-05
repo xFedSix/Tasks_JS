@@ -1,9 +1,14 @@
 const header = document.querySelector("header");
 window.addEventListener("scroll", function (e) {
   const scrollFromTop = document.querySelector("html").scrollTop;
+<<<<<<< HEAD
   header.style.background =
     scrollFromTop > 0 ? "red" : "";
       header.style.transition  ="all 2s";
+=======
+  header.style.background = scrollFromTop > 0 ? "red" : "";
+  header.style.transition = "all 2s";
+>>>>>>> 613839d4fdd2bc307e1bb36dfa2af7bb26d6ff66
 });
 const button1 = document.getElementById("button1");
 const button2 = document.getElementById("button2");
